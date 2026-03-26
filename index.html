@@ -23,189 +23,892 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
-                    <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
-                    </ul>
+                    <h1>Web APIs: работа с возможностями браузера</h1>
                 </section>
-                <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
-                </section>
+
                 <section>
                     <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
+                        <h1>Browser API</h1>
                         <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
+                            набор интерфейсов, предоставляемых браузером
+                            JavaScript-коду для взаимодействия с браузером,
+                            операционной системой и устройством пользователя
                         </p>
+                        <h4>Доступны через глобальные объекты</h4>
+                        <ul>
+                            <li><code>window</code></li>
+                            <li><code>navigator</code></li>
+                            <li><code>document</code></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Не часть языка</h1>
+                        <div class="border-b">
+                            Browser APIs не являются частью JavaScript — они
+                            предоставляются браузерным окружением
+                        </div>
+                        <h4>Что можно делать</h4>
+                        <ul>
+                            <li>Хранить данные на клиенте</li>
+                            <li>Работать с устройством и сетью</li>
+                            <li>Управлять окном и навигацией</li>
+                            <li>Читать файлы и работать с медиа</li>
+                        </ul>
                     </section>
                 </section>
+
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
+                    <section>
+                        <h1>Хранение данных в браузере</h1>
+                    </section>
+                    <section>
+                        <h1>Механизмы хранения</h1>
+                        <div
+                            style="
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1rem;
+                            ">
+                            <div class="border-b">
+                                <h5><code>localStorage</code></h5>
+                                <p>
+                                    ~5–10 МБ, хранится постоянно, только текущий
+                                    origin
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h5><code>sessionStorage</code></h5>
+                                <p>
+                                    ~5–10 МБ, до закрытия вкладки, только
+                                    текущая вкладка
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h5>Cookies</h5>
+                                <p>
+                                    ~4 КБ, время жизни задаётся явно,
+                                    отправляются на сервер
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h5>IndexedDB</h5>
+                                <p>
+                                    Сотни МБ, хранится постоянно, только текущий
+                                    origin
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>localStorage</h1>
+                        <p>
+                            объект хранилища, данные из которого сохраняются
+                            бессрочно — до явного удаления кодом или
+                            пользователем
+                        </p>
+                        <h4>Данные привязаны к origin</h4>
+                        <div class="border-b">протокол + домен + порт</div>
+                    </section>
+                    <section>
+                        <h1>Методы localStorage</h1>
+                        <ul>
+                            <li>
+                                <code>localStorage.setItem(key, value)</code>
+                                — сохранить значение
+                            </li>
+                            <li>
+                                <code>localStorage.getItem(key)</code>
+                                — получить значение (или
+                                <code>null</code>
+                                )
+                            </li>
+                            <li>
+                                <code>localStorage.removeItem(key)</code>
+                                — удалить ключ
+                            </li>
+                            <li>
+                                <code>localStorage.clear()</code>
+                                — очистить всё хранилище
+                            </li>
+                            <li>
+                                <code>localStorage.length</code>
+                                — количество ключей
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Сохранение строки
+localStorage.setItem('username', 'alice');
+
+// Чтение
+const name = localStorage.getItem('username');
+console.log(name); // 'alice'
+
+// Удаление
+localStorage.removeItem('username');
+
+// Полная очистка
+localStorage.clear();
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>sessionStorage</h1>
+                        <p>
+                            аналог localStorage, но данные живут только в рамках
+                            одной вкладки и удаляются при её закрытии
+                        </p>
+                        <h4>Когда использовать</h4>
+                        <ul>
+                            <li>
+                                Временное сохранение состояния многошаговых форм
+                            </li>
+                            <li>
+                                Данные, которые не должны "утекать" в другие
+                                вкладки
+                            </li>
+                            <li>Кэш данных на время одного сеанса просмотра</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Сохраняем данные формы на время сессии
+sessionStorage.setItem('draftMessage', 'Привет, это черновик...');
+
+// Читаем при возврате на страницу
+const draft = sessionStorage.getItem('draftMessage');
+if (draft) {
+  document.getElementById('messageInput').value = draft;
+}
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Сериализация</h1>
+                        <p>
+                            Web Storage хранит только строки — объекты нужно
+                            сериализовать перед записью и десериализовать при
+                            чтении
+                        </p>
+                        <div
+                            style="
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1rem;
+                            ">
+                            <div class="border-b">
+                                <h5><code>JSON.stringify(value)</code></h5>
+                                <p>
+                                    преобразует JavaScript-значение в
+                                    JSON-строку
+                                </p>
+                            </div>
+                            <div class="border-b">
+                                <h5><code>JSON.parse(string)</code></h5>
+                                <p>
+                                    разбирает JSON-строку обратно в
+                                    JavaScript-значение
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+const user = {
+  id: 42,
+  name: 'Alice',
+  preferences: { theme: 'dark', language: 'ru' }
+};
+
+// Сериализация и сохранение
+localStorage.setItem('user', JSON.stringify(user));
+
+// Чтение и десериализация
+const raw = localStorage.getItem('user');
+const restoredUser = JSON.parse(raw);
+
+console.log(restoredUser.preferences.theme); // 'dark'
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Безопасное чтение</h1>
+                        <pre><code class="js">
+function getFromStorage(key) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    console.error('Ошибка чтения:', e);
+    return null;
+  }
+}
+
+function saveToStorage(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (e) {
+    console.error('Ошибка записи:', e);
+  }
+}
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Cookies</h1>
+                        <p>
+                            небольшой фрагмент данных, который браузер хранит и
+                            автоматически отправляет на сервер при каждом
+                            HTTP-запросе — главное отличие от localStorage
+                        </p>
+                        <h4>Важные атрибуты</h4>
+                        <ul>
+                            <li>
+                                <code>max-age / expires</code>
+                                — время жизни
+                            </li>
+                            <li>
+                                <code>HttpOnly</code>
+                                — недоступен через JS
+                            </li>
+                            <li>
+                                <code>Secure</code>
+                                — только по HTTPS
+                            </li>
+                            <li>
+                                <code>SameSite</code>
+                                — защита от CSRF-атак
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Установка cookie
+document.cookie = 'theme=dark; path=/; max-age=86400; SameSite=Strict';
+
+// Чтение (строка, требует парсинга)
+console.log(document.cookie); // 'theme=dark; user=alice'
+        </code></pre>
+                        <div class="border-b">
+                            Для удобной работы рекомендуется использовать
+                            современный
+                            <strong>Cookie Store API</strong>
+                            или библиотеки вроде
+                            <code>js-cookie</code>
+                        </div>
+                    </section>
                 </section>
+
                 <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
+                    <section>
+                        <h1>Navigator API</h1>
+                        <h2>Работа с устройством и окружением</h2>
+                    </section>
+                    <section>
+                        <h1>Объект navigator</h1>
+                        <p>
+                            глобальный объект, предоставляющий информацию о
+                            браузере и устройстве пользователя
+                        </p>
+                        <div class="border-b">
+                            Доступен как
+                            <code>window.navigator</code>
+                            или просто
+                            <code>navigator</code>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>navigator.userAgent</h1>
+                        <p>
+                            строка, идентифицирующая браузер и операционную
+                            систему
+                        </p>
+                        <pre><code class="js">
+console.log(navigator.userAgent);
+// 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) ...'
+
+// Определение мобильного устройства
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+console.log(isMobile); // true или false
+        </code></pre>
+                        <div class="border-b">
+                            userAgent легко подделать — предпочитайте
+                            <strong>feature detection</strong>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>navigator.onLine</h1>
+                        <p>
+                            булево свойство, отражающее наличие сетевого
+                            подключения
+                        </p>
+                        <pre><code class="js">
+console.log(navigator.onLine); // true или false
+
+window.addEventListener('online', () => {
+  showNotification('Вы снова онлайн', 'success');
+});
+
+window.addEventListener('offline', () => {
+  showNotification('Нет подключения к интернету', 'warning');
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Geolocation API</h1>
+                        <p>
+                            позволяет получить географическое положение
+                            устройства. Требует явного разрешения пользователя
+                        </p>
+                        <h4>Ключевые методы</h4>
+                        <ul>
+                            <li>
+                                <code>getCurrentPosition()</code>
+                                — одноразовый запрос позиции
+                            </li>
+                            <li>
+                                <code>watchPosition()</code>
+                                — непрерывное отслеживание
+                            </li>
+                            <li>
+                                <code>clearWatch(id)</code>
+                                — прекратить отслеживание
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+navigator.geolocation.getCurrentPosition(
+  (position) => {
+    const { latitude, longitude, accuracy } = position.coords;
+    console.log(`Широта: ${latitude}`);
+    console.log(`Долгота: ${longitude}`);
+    console.log(`Точность: ±${accuracy} м`);
+  },
+  (error) => {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        console.error('Пользователь запретил доступ');
+        break;
+      case error.TIMEOUT:
+        console.error('Превышено время ожидания');
+        break;
+    }
+  },
+  { enableHighAccuracy: true, timeout: 5000 }
+);
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Язык пользователя</h1>
+                        <pre><code class="js">
+// Основной язык браузера
+console.log(navigator.language); // 'ru-RU', 'en-US'
+
+// Все предпочтительные языки
+console.log(navigator.languages); // ['ru-RU', 'ru', 'en']
+
+// Автоопределение языка
+function detectLanguage() {
+  const preferred = navigator.language || navigator.languages[0];
+  const lang = preferred.split('-')[0]; // 'ru' из 'ru-RU'
+  return ['ru', 'en', 'de'].includes(lang) ? lang : 'en';
+}
+        </code></pre>
+                    </section>
                 </section>
+
                 <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
-                    <img
-                        class="r-stretch"
-                        src="https://goqr.me/"
-                        data-type="qrcode" />
+                    <section>
+                        <h1>Window API</h1>
+                        <h2>Работа с окном и вкладками</h2>
+                    </section>
+                    <section>
+                        <h1>Объект window</h1>
+                        <p>
+                            глобальный объект браузерного окружения. Все
+                            глобальные переменные и большинство Browser APIs
+                            являются его свойствами
+                        </p>
+                        <pre><code class="js">
+console.log(window.innerWidth);      // ширина области просмотра
+console.log(window.innerHeight);     // высота области просмотра
+console.log(window.devicePixelRatio); // для Retina-дисплеев
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Location API</h1>
+                        <p>
+                            объект, представляющий текущий URL страницы и
+                            предоставляющий методы для навигации
+                        </p>
+                        <pre><code class="js">
+console.log(location.href);     // 'https://example.com/page?q=test#section'
+console.log(location.protocol); // 'https:'
+console.log(location.pathname); // '/page'
+console.log(location.search);   // '?q=test'
+console.log(location.hash);     // '#section'
+
+// Парсинг строки запроса
+const params = new URLSearchParams(location.search);
+console.log(params.get('q')); // 'test'
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Навигация через location</h1>
+                        <pre><code class="js">
+// Переход (записывается в history)
+location.href = 'https://google.com';
+
+// Переход (НЕ записывается в history)
+location.replace('https://google.com');
+
+// Перезагрузка страницы
+location.reload();
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>History API</h1>
+                        <p>
+                            управление историей браузера — позволяет добавлять и
+                            изменять записи без перезагрузки страницы
+                        </p>
+                        <div class="border-b">
+                            Ключевая основа для SPA — Single Page Applications
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Переходы по истории
+history.back();    // как кнопка «Назад»
+history.forward(); // как кнопка «Вперёд»
+history.go(-2);    // назад на 2 шага
+
+// Добавление записи без перезагрузки
+history.pushState({ page: 'about' }, '', '/about');
+console.log(location.pathname); // '/about' (без перезагрузки!)
+
+// Обработка кнопки «Назад» в SPA
+window.addEventListener('popstate', (event) => {
+  renderPage(event.state?.page || 'home');
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Scroll API</h1>
+                        <pre><code class="js">
+// Текущая позиция
+console.log(window.scrollX); // горизонтальная
+console.log(window.scrollY); // вертикальная
+
+// Плавная прокрутка к координатам
+window.scrollTo({ top: 1000, behavior: 'smooth' });
+
+// Прокрутка относительно текущей позиции
+window.scrollBy({ top: 200, behavior: 'smooth' });
+
+// Прокрутка к элементу
+document.getElementById('contacts')
+  .scrollIntoView({ behavior: 'smooth', block: 'start' });
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>setTimeout / setInterval</h1>
+                        <div
+                            style="
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1rem;
+                            ">
+                            <div class="border-b">
+                                <h5>setTimeout</h5>
+                                <p>выполняет функцию один раз после задержки</p>
+                            </div>
+                            <div class="border-b">
+                                <h5>setInterval</h5>
+                                <p>
+                                    выполняет функцию многократно с заданным
+                                    интервалом
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// setTimeout — однократное выполнение
+const timerId = setTimeout(() => {
+  console.log('Выполняется через 2 секунды');
+}, 2000);
+
+clearTimeout(timerId); // Отмена до срабатывания
+
+// setInterval — периодическое выполнение
+let count = 0;
+const intervalId = setInterval(() => {
+  count++;
+  if (count >= 5) {
+    clearInterval(intervalId);
+  }
+}, 1000);
+        </code></pre>
+                    </section>
                 </section>
+
                 <section>
-                    <h1>New changes on the way!</h1>
+                    <section>
+                        <h1>File API</h1>
+                        <h2>Работа с мультимедиа и файлами</h2>
+                    </section>
+                    <section>
+                        <h1>input type="file"</h1>
+                        <p>
+                            HTML-элемент, открывающий системный диалог выбора
+                            файла
+                        </p>
+                        <pre><code class="html">
+&lt;!-- Простой выбор одного файла --&gt;
+&lt;input type="file" id="fileInput"&gt;
+
+&lt;!-- Выбор нескольких файлов --&gt;
+&lt;input type="file" id="multipleInput" multiple&gt;
+
+&lt;!-- Только изображения --&gt;
+&lt;input type="file" id="imageInput" accept="image/*"&gt;
+        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+const input = document.getElementById('fileInput');
+
+input.addEventListener('change', (event) => {
+  const files = event.target.files; // FileList
+
+  for (const file of files) {
+    console.log(`Имя: ${file.name}`);
+    console.log(`Тип: ${file.type}`);
+    console.log(`Размер: ${(file.size / 1024).toFixed(2)} КБ`);
+    console.log(`Изменён: ${new Date(file.lastModified).toLocaleString()}`);
+  }
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Интерфейсы File API</h1>
+                        <ul>
+                            <li>
+                                <code>File</code>
+                                — представляет файл (расширяет
+                                <code>Blob</code>
+                                )
+                            </li>
+                            <li>
+                                <code>FileList</code>
+                                — список файлов из
+                                <code>&lt;input&gt;</code>
+                                или drag &amp; drop
+                            </li>
+                            <li>
+                                <code>FileReader</code>
+                                — читает содержимое файлов асинхронно
+                            </li>
+                            <li>
+                                <code>Blob</code>
+                                — бинарный объект данных
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Чтение файла как текст
+function readFileAsText(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => resolve(e.target.result);
+    reader.onerror = () => reject(reader.error);
+    reader.readAsText(file, 'UTF-8');
+  });
+}
+
+// Использование
+input.addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (file.type.startsWith('text/')) {
+    const content = await readFileAsText(file);
+    console.log('Содержимое:', content);
+  }
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Preview изображений</h1>
+                        <pre><code class="html">
+&lt;input type="file" id="imageInput" accept="image/*"&gt;
+&lt;img id="preview" src="" alt="Preview"
+     style="max-width: 300px; display: none;"&gt;
+        </code></pre>
+                        <pre><code class="js">
+imageInput.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+
+  // URL.createObjectURL — эффективнее, без копирования данных
+  const objectUrl = URL.createObjectURL(file);
+  preview.src = objectUrl;
+  preview.style.display = 'block';
+
+  // Освобождаем память после использования
+  preview.onload = () => URL.revokeObjectURL(objectUrl);
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Drag &amp; Drop</h1>
+                        <h4>Ключевые события</h4>
+                        <ul>
+                            <li>
+                                <code>dragenter</code>
+                                — элемент перетащили в зону
+                            </li>
+                            <li>
+                                <code>dragover</code>
+                                — элемент над зоной (нужен
+                                <code>preventDefault()</code>
+                                )
+                            </li>
+                            <li>
+                                <code>dragleave</code>
+                                — элемент покинул зону
+                            </li>
+                            <li>
+                                <code>drop</code>
+                                — элемент был отпущен в зоне
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+dropZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dropZone.classList.add('drop-zone--active');
+});
+
+dropZone.addEventListener('dragleave', () => {
+  dropZone.classList.remove('drop-zone--active');
+});
+
+dropZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dropZone.classList.remove('drop-zone--active');
+
+  const files = e.dataTransfer.files;
+  for (const file of files) {
+    processFile(file);
+  }
+});
+        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Дополнительные API</h1>
+                    </section>
+                    <section>
+                        <h1>Clipboard API</h1>
+                        <p>
+                            предоставляет доступ к буферу обмена системы.
+                            Асинхронный, для чтения требует разрешения
+                            пользователя
+                        </p>
+                        <h4>Ключевые методы</h4>
+                        <ul>
+                            <li>
+                                <code>navigator.clipboard.writeText(text)</code>
+                                — записать текст
+                            </li>
+                            <li>
+                                <code>navigator.clipboard.readText()</code>
+                                — прочитать текст
+                            </li>
+                            <li>
+                                <code>navigator.clipboard.write(items)</code>
+                                — произвольные данные
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('Текст скопирован!');
+  } catch (err) {
+    console.error('Ошибка копирования:', err);
+  }
+}
+
+// Кнопка «Копировать код»
+document.querySelectorAll('.code-block').forEach((block) => {
+  const button = block.querySelector('.copy-btn');
+  button.addEventListener('click', async () => {
+    await copyToClipboard(block.querySelector('code').textContent);
+    button.textContent = '✓ Скопировано!';
+    setTimeout(() => { button.textContent = 'Копировать'; }, 2000);
+  });
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Intersection Observer</h1>
+                        <p>
+                            эффективный способ отслеживать, находится ли элемент
+                            в зоне видимости — альтернатива отслеживанию события
+                            <code>scroll</code>
+                        </p>
+                        <h4>Основные применения</h4>
+                        <ul>
+                            <li>Ленивая загрузка изображений</li>
+                            <li>Бесконечный скролл</li>
+                            <li>Анимации при появлении элементов</li>
+                            <li>Трекинг видимости (аналитика)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+const observer = new IntersectionObserver(callback, {
+  root: null,         // null = viewport
+  rootMargin: '0px',  // отступы (как CSS margin)
+  threshold: 0        // 0 = 1px видно, 1 = полностью виден
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Ленивая загрузка</h1>
+                        <pre><code class="html">
+&lt;img data-src="large-image.jpg" src="placeholder.jpg" class="lazy"&gt;
+        </code></pre>
+                        <pre><code class="js">
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+      observer.unobserve(img); // Прекращаем наблюдение
+    }
+  });
+}, { rootMargin: '200px 0px' }); // Загружаем за 200px до появления
+
+document.querySelectorAll('img.lazy')
+  .forEach((img) => imageObserver.observe(img));
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Анимация при появлении</h1>
+                        <pre><code class="css">
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+        </code></pre>
+                        <pre><code class="js">
+const animationObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      animationObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Web Storage Events</h1>
+                        <p>
+                            событие
+                            <code>storage</code>
+                            срабатывает в других вкладках того же origin при
+                            изменении
+                            <code>localStorage</code>
+                        </p>
+                        <div class="border-b">
+                            Событие не срабатывает в той вкладке, которая
+                            изменила данные — только в остальных
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+// Синхронизация авторизации между вкладками
+window.addEventListener('storage', (event) => {
+  if (event.key === 'authToken') {
+    if (event.newValue === null) {
+      // Пользователь вышел в другой вкладке
+      window.location.href = '/login';
+    } else {
+      updateUserUI(JSON.parse(event.newValue));
+    }
+  }
+});
+
+// Современный подход: BroadcastChannel API
+const channel = new BroadcastChannel('app-sync');
+channel.postMessage({ type: 'USER_LOGOUT' });
+channel.addEventListener('message', (event) => {
+  if (event.data.type === 'USER_LOGOUT') {
+    window.location.href = '/login';
+  }
+});
+        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Fullscreen API</h1>
+                        <p>
+                            позволяет переводить элементы страницы в
+                            полноэкранный режим
+                        </p>
+                        <h4>Ключевые методы и свойства</h4>
+                        <ul>
+                            <li>
+                                <code>element.requestFullscreen()</code>
+                                — запросить полноэкранный режим
+                            </li>
+                            <li>
+                                <code>document.exitFullscreen()</code>
+                                — выйти из режима
+                            </li>
+                            <li>
+                                <code>document.fullscreenElement</code>
+                                — текущий элемент или
+                                <code>null</code>
+                            </li>
+                            <li>
+                                Событие
+                                <code>fullscreenchange</code>
+                                — при изменении режима
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre><code class="js">
+async function toggleFullscreen(element) {
+  if (document.fullscreenElement) {
+    await document.exitFullscreen();
+  } else {
+    await element.requestFullscreen();
+  }
+}
+
+fullscreenBtn.addEventListener('click', () => {
+  toggleFullscreen(videoContainer);
+});
+
+document.addEventListener('fullscreenchange', () => {
+  const isFullscreen = !!document.fullscreenElement;
+  fullscreenBtn.textContent = isFullscreen ? '⛶ Выйти' : '⛶ На весь экран';
+});
+        </code></pre>
+                    </section>
                 </section>
             </div>
         </div>
@@ -396,4 +1099,3 @@ var foo = {
         </script>
     </body>
 </html>
-
